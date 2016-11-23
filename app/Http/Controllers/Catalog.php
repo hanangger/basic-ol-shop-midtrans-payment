@@ -35,7 +35,11 @@ class Catalog extends Controller
                             ->where('price', '<', $filter['price'][1]*1000)
                             ->get();
             }else{
-
+                  $items = Items::select('*')
+                            ->where(['brand'=>$request->input('brand')])
+                            ->where('price', '>', $filter['price'][0]*1000)
+                            ->where('price', '<', $filter['price'][1]*1000)
+                            ->get();
             }
 
         }else{

@@ -9,11 +9,11 @@
 	                <label for="brand" class="control-label">Select Brand</label>
 	                {{ Form::select('brand', ['asus'=>'Asus', 'samsung'=>'Samsung', 'sony'=>'Sony', 'xiaomi'=>'Xiaomi'], Input::get('brand'), ['class'=>'form-control', 'onChange'=>'return brand_change($(this))']) }}
 	            </div>
-	            <!--
+	            
 	            <div class="form-group pd-10">
 	                <label for="price_range" class="control-label">Select Price Range</label>
-	                {{ Form::select('price', ['500-1500'=>'500.000 - 1.000.000', '1500-3000'=>'1.5000.000 - 3.000.000', '3000-5000'=> '3.000.000 - 5.000.000', '5000-10000'=>'5.000.000 - 10.000.000'], null, ['class'=>'form-control', 'onChange'=>'return price_change($(this))']) }}
-	            </div>-->
+	                {{ Form::select('price', ['500-1500'=>'500.000 - 1.000.000', '1500-3000'=>'1.5000.000 - 3.000.000', '3000-5000'=> '3.000.000 - 5.000.000', '5000-10000'=>'5.000.000 - 10.000.000'], Input::get('price'), ['class'=>'form-control', 'onChange'=>'return price_change($(this))']) }}
+	            </div>
 			{{ Form::close() }}
 		</div>
 		<div class="col-md-9 v-line">
