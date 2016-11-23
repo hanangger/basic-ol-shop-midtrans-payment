@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-3 v-line"></div>
 		<div class="col-md-6 v-line">
-			<h3>My Cart</h3>
+			<h3>My cartList</h3>
 			<table class="table table-striped">
 				<tr>
 					<td>Name</td>

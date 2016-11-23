@@ -36,6 +36,9 @@
 			.navbar-default .navbar-nav>li>a {
 				color:white;
 			}
+			.pd-10 {
+				padding:10px;
+			}
 		</style>
 		<script type="text/javascript" src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
 		<script type="text/javascript" src="{{asset('js/html5shiv_3_7_2.min.js')}}"></script>

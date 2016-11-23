@@ -19,7 +19,7 @@
                     <label for="stock" class="control-label">Stock</label>
                     {{Form::text('stock', 1, ['id'=>'stock', 'class'=>'form-control'])}}
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="specification" class="control-label">Specification</label>
                     {{Form::textarea('specification', "", ['id'=>'specification', 'class'=>'form-control'])}}
                 </div>

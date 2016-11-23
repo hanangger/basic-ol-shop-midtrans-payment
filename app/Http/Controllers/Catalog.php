@@ -18,12 +18,31 @@ class Catalog extends Controller
     public function __construct(){   
         Veritrans::$serverKey = 'VT-server-1GJmRjYjnQOkcBR86C39GdHM';
         Veritrans::$isProduction = false;
+
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        if($request->input('brand') != null || $request->input('price') != null){
+            $filter = ['brand'=>$request->input('brand'), 'price'=>explode("-", $request->input('price'))];
+            if($request->input('brand') != null && $request->input('price') == null ){
+                $items = Items::select('*')
+                            ->where(['brand'=>$request->input('brand')])
+                            ->get();
+            }else if($request->input('brand') == null && $request->input('price') != null){
+              $items = Items::select('*')
+                            ->where('price', '>', $filter['price'][0]*1000)
+                            ->where('price', '<', $filter['price'][1]*1000)
+                            ->get();
+            }else{
+
+            }
+
+        }else{
+           $items = Items::all();
+        }
         
-        $items = Items::all();
+       
         return view('commerce/list', compact('items'));
     }
 
